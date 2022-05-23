@@ -1,0 +1,43 @@
+.todo-item{
+    height: 7vh;
+    font-size: 20px;
+    align-items: center;
+    background-color: white;
+    color: rgb(1, 76, 113);
+    transition: linear 1s;
+    text-align: left;
+    line-height: 40px;
+}
+
+.todo-item span{
+    padding: 10px;
+    width: 100%;
+}
+
+.delete-icon{
+    float: right;
+    height: 100%;
+    padding: 10px;
+    width: 0;
+    opacity: 0;
+    color: white;
+    background-color: red;
+    transition: all 0.3s;
+}
+
+.todo-item:hover .delete-icon{
+    width: 10%;
+    opacity: 1;
+}
+
+.todo-item:nth-child(even){
+    background-color: rgb(235, 235, 235);
+}
+
+.todo-item:last-child{
+    border-radius: 0 0 10px 10px;
+}
+
+.todo-item:last-child .delete-icon{
+    border-radius: 0 0 10px 0px;
+}
