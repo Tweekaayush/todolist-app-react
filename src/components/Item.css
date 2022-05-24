@@ -1,21 +1,26 @@
 .todo-item{
-    height: 7vh;
-    font-size: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    text-align: left;
+    transition: linear 1s;
     background-color: white;
     color: rgb(1, 76, 113);
-    transition: linear 1s;
-    text-align: left;
-    line-height: 50px;
 }
 
-.todo-item span{
-    padding: 10px;
+.todo-item li{
     width: 100%;
+    padding: 10px;
+    font-size: 25px;
+    overflow-x: auto;
+}
+
+.todo-item li::-webkit-scrollbar {
+    display: none;
 }
 
 .delete-icon{
-    float: right;
     height: 100%;
     padding: 13px;
     width: 0;
@@ -28,6 +33,9 @@
 .todo-item:hover .delete-icon{
     width: 10%;
     opacity: 1;
+}
+.todo-item:hover span{
+    width: 90%;
 }
 
 .todo-item:nth-child(even){

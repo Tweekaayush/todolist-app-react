@@ -9,12 +9,13 @@ function Item(props){
     }
 
     return(
-            <li className="todo-item">
-                <span className="text">
+    
+            <div className="todo-item">
+                <li>
                     {props.content}
-                </span>
+                </li>
                 <FaTrash className="delete-icon" onClick={handleClick}/>
-            </li>
+            </div>
     );
 }
 

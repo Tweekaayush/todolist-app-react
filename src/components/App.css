@@ -7,9 +7,14 @@
     font-weight: bold;
 }
 
+body{
+    background: -webkit-linear-gradient(to right, #a452f5, #822bda);
+	background: linear-gradient(to right, #a452f5, #822bda);
+}
+
 .todoSection{
     width: 100%;
-    height: 100vh;
+    margin: 200px auto;
     background: -webkit-linear-gradient(to right, #a452f5, #822bda);
 	background: linear-gradient(to right, #a452f5, #822bda);
     position: relative;
@@ -39,7 +44,8 @@
     background-color: rgb(136, 0, 255);
     color: white;
     border-radius: 10px 10px 0 0;
-    height: 8vh;
+    height: 60px;
+    text-transform: uppercase;
 }
 
 .header .icon{
@@ -48,7 +54,7 @@
 
 input{
     width: 100%;
-    height: 7vh;
+    height: 50px;
     border: none;
     background-color: rgb(209, 209, 209);
     text-align: left;
@@ -66,7 +72,6 @@ input:focus{
 }
 
 .icon:hover input{
-    visibility: hidden;
     opacity: 0;
 }
 
@@ -76,10 +81,12 @@ input::placeholder{
 }
 
 ul{ 
-    list-style: none;
+
     width: 100%;
     margin: 0;
     padding: 0;
+    max-height: 250px;
+    overflow-y: auto;
 }
 
 .hide{
