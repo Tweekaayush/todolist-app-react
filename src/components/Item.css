@@ -6,7 +6,7 @@
     color: rgb(1, 76, 113);
     transition: linear 1s;
     text-align: left;
-    line-height: 40px;
+    line-height: 50px;
 }
 
 .todo-item span{
@@ -17,7 +17,7 @@
 .delete-icon{
     float: right;
     height: 100%;
-    padding: 10px;
+    padding: 13px;
     width: 0;
     opacity: 0;
     color: white;
@@ -40,4 +40,14 @@
 
 .todo-item:last-child .delete-icon{
     border-radius: 0 0 10px 0px;
+}
+
+@media screen and (max-width: 480px) {
+    .delete-icon{
+        padding: 15px;
+    }
+
+    .todo-item:hover .delete-icon{
+        width: 15%; 
+    }
 }

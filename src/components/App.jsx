@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {FaPlus, FaTrash} from "react-icons/fa";
 import "./App.css";
 import Item from "./Item";
@@ -8,6 +8,13 @@ function App(){
     const [input, setInput] = useState("");
     const [items, setItems] = useState([]);
     const [bar, setBar] = useState(false);
+
+    const inputElement = useRef(null);
+    useEffect(() => {
+        if(inputElement.current){
+            inputElement.current.focus();
+        }
+    }, []);
 
     function addTodo(e){
         if(e.keyCode === 13){
@@ -27,6 +34,9 @@ function App(){
     }
 
     function handleInputBar(){
+        if(inputElement.current && bar === true){
+            inputElement.current.focus();
+        }
         setBar(!bar);
     }
 
@@ -37,7 +47,7 @@ function App(){
                     <h1>Todo List</h1>
                     <FaPlus className="icon" onClick={handleInputBar}/>
                 </div>
-                <input className={bar?"hide":""} onKeyDown={addTodo} onChange={(e)=>setInput(e.target.value)}type="text" name="new" id="newItem" placeholder="Add new Item in the list"/>
+                <input ref={inputElement} className={bar?"hide":""} onKeyDown={addTodo} onChange={(e)=>setInput(e.target.value)}type="text" name="new" id="newItem" placeholder="Add new Item in the list"/>
                 <ul className="todo-list">
                     {items.map(createTodo)}
                 </ul>

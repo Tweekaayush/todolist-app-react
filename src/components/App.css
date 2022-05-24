@@ -62,6 +62,7 @@ input{
 
 input:focus{
     outline: none;
+    border: 3px solid rgb(136, 0, 255);
 }
 
 .icon:hover input{
@@ -84,4 +85,10 @@ ul{
 .hide{
     height: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+        width: 350px;
+    }
 }
