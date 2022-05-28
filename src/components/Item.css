@@ -5,7 +5,7 @@
     align-items: center;
     text-align: left;
     transition: linear 1s;
-    background-color: white;
+    background-color: #ffc0c0;
     color: rgb(1, 76, 113);
 }
 
@@ -39,7 +39,7 @@
 }
 
 .todo-item:nth-child(even){
-    background-color: rgb(235, 235, 235);
+    background-color: #fdefef;
 }
 
 .todo-item:last-child{

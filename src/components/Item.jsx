@@ -12,7 +12,7 @@ function Item(props){
     
             <div className="todo-item">
                 <li>
-                    {props.content}
+                    {props.id+1}. {props.content}
                 </li>
                 <FaTrash className="delete-icon" onClick={handleClick}/>
             </div>
